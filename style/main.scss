@@ -1,0 +1,97 @@
+//! Importing
+@use './pages/pages'; //import _pages.scss file
+@use './variables/colors'; //import variables
+
+//! Variable
+$mainColor: green; //global global 
+.class{
+  $classColor:red !global; //local variable and make it global
+  color: $mainColor; //get variable
+  color: colors.$mainIdColor; //get variable from colors file
+}
+$max_mobile:'max-width:500px';
+@media ($max_mobile) {
+  .class{
+    color: red;
+  }
+}
+
+//! Loops
+@for $i from 1 through 2{ //loop
+  .class{
+    font-size: $i+1px;
+  } 
+}
+
+//! Parent & nested child
+.parent{
+  font-size: 10px;
+  .child{
+    font-size: 8px;
+    .grand-child{
+      font-size: 5px;
+    }
+  }
+}
+
+//! Grouping
+.parent-one,
+.parent-two{
+  font-size: 10px;
+  .child{
+    font-size: 7px;
+  }
+}
+
+//! Direct child (.parent > .child{}) in css
+.parent > {
+  .child{
+    font-size: 10px;
+  }
+}
+.parent {
+  > .child{ //only direct child
+    font-size: 10px;
+  }
+  .test{ // all test in parent
+    font-size: 18px;
+  }
+  + p{ //next element 
+    font-size: 90px;
+  }
+}
+.parent{
+  >{
+    .child{
+      font-size: 10px;
+    }
+    .child-2{
+      font-size: 10px;
+    }
+  }
+  +{
+    p{
+      font-size: 10px;
+    }
+    h1{
+      font-size: 10px;
+    }
+  }
+}
+.parent {
+  .child{
+    font-size: 10px;
+  }
+  &.clicked{ //(.parent.clicked{}) in css
+    font-size: 6px;
+  }
+  &:hover { 
+    font-size: 6px;
+  }
+  &:not(&){ //(.parent:not(.parent) {}) in css
+    font-size: 10px;
+  }
+  [dir='rtl'] &{ //([dir=rtl] .parent {}) in css
+    direction: rtl;
+  }
+}

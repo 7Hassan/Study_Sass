@@ -1,0 +1,6 @@
+
+@for $i from 1 through 2{
+  .id{
+    font-size: $i+1px;
+  }
+}

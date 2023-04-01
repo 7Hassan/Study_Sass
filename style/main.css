@@ -1,0 +1,88 @@
+.id {
+  font-size: 2px;
+}
+
+.id {
+  font-size: 3px;
+}
+
+.class {
+  color: green;
+  color: white;
+}
+
+@media (max-width:500px) {
+  .class {
+    color: red;
+  }
+}
+.class {
+  font-size: 2px;
+}
+
+.class {
+  font-size: 3px;
+}
+
+.parent {
+  font-size: 10px;
+}
+.parent .child {
+  font-size: 8px;
+}
+.parent .child .grand-child {
+  font-size: 5px;
+}
+
+.parent-one,
+.parent-two {
+  font-size: 10px;
+}
+.parent-one .child,
+.parent-two .child {
+  font-size: 7px;
+}
+
+.parent > .child {
+  font-size: 10px;
+}
+
+.parent > .child {
+  font-size: 10px;
+}
+.parent .test {
+  font-size: 18px;
+}
+.parent + p {
+  font-size: 90px;
+}
+
+.parent > .child {
+  font-size: 10px;
+}
+.parent > .child-2 {
+  font-size: 10px;
+}
+.parent + p {
+  font-size: 10px;
+}
+.parent + h1 {
+  font-size: 10px;
+}
+
+.parent .child {
+  font-size: 10px;
+}
+.parent.clicked {
+  font-size: 6px;
+}
+.parent:hover {
+  font-size: 6px;
+}
+.parent:not(.parent) {
+  font-size: 10px;
+}
+[dir=rtl] .parent {
+  direction: rtl;
+}
+/*# sourceMappingURL=main.css.map */
