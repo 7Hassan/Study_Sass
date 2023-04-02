@@ -85,4 +85,39 @@
 [dir=rtl] .parent {
   direction: rtl;
 }
+.parent::before {
+  color: red;
+}
+
+.box-container, .box {
+  font-size: 10px;
+  color: red;
+  background-color: #000;
+}
+
+.box {
+  font-size: 10px;
+  color: red;
+  background-color: #000;
+}
+
+.box {
+  color: white;
+}
+
+.page {
+  background-color: white;
+  color: white;
+}
+
+.class-pages {
+  color: white;
+}
+.class-pages .class-uvqj872 {
+  color: white;
+}
+
+/* show in scss and css not compressed mode */
+/*! show in scss and css and compressed mode */
+/* dynamic comment variable => pages*/
 /*# sourceMappingURL=main.css.map */

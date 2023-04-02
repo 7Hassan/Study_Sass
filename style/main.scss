@@ -94,4 +94,47 @@ $max_mobile:'max-width:500px';
   [dir='rtl'] &{ //([dir=rtl] .parent {}) in css
     direction: rtl;
   }
+  &::before{
+    color: red;
+  }
 }
+
+//! Place holders
+.box-container{
+  font-size: 10px;
+  color: red;
+  background-color: #000;
+}
+%place-holder{
+  font-size: 10px;
+  color: red;
+  background-color: #000;
+}
+.box{
+  @extend .box-container; //take the same properties of box-container
+  @extend %place-holder; //take the same properties from place holder 
+  color: white;
+}
+
+//! if & else
+.page{
+  $theme:'light';
+  @if $theme == 'light'{background-color: white;}
+  @else{background-color: black;}
+  color: if($theme == 'light',white,black); 
+}
+
+//! interpolation
+$class_name: 'pages'; 
+.class-#{$class_name}{
+  color: white;
+  .class-#{unique-id()}{ //this function make unique name
+    color: white;
+  }
+}
+
+//! comments
+// show in scss not css
+/* show in scss and css not compressed mode */
+/*! show in scss and css and compressed mode */
+/* dynamic comment variable => #{$class_name}*/
