@@ -24,6 +24,88 @@
   font-size: 3px;
 }
 
+.class {
+  font-size: 4px;
+}
+
+.class {
+  font-size: 2px;
+}
+
+.class {
+  font-size: 1px;
+}
+
+.class {
+  font-size: 2px;
+}
+
+.class {
+  font-size: 3px;
+}
+
+.class {
+  font-size: 4px;
+}
+
+.class {
+  font-size: 5px;
+}
+
+.class {
+  font-size: 6px;
+}
+
+.class {
+  font-size: 7px;
+}
+
+.class {
+  font-size: 8px;
+}
+
+.class {
+  font-size: 9px;
+}
+
+.class {
+  font-size: 10px;
+}
+
+.class {
+  font-size: 11px;
+}
+
+.red-class {
+  color: red;
+}
+
+.green-class {
+  color: green;
+}
+
+.blue-class {
+  color: blue;
+}
+
+.facebook-class {
+  color: red;
+}
+
+.inst-class {
+  color: green;
+}
+
+.one-class {
+  color: red;
+  font-size: 13px;
+}
+
+.tow-class {
+  color: green;
+  font-size: 12px;
+}
+
 .parent {
   font-size: 10px;
 }
@@ -113,11 +195,19 @@
 .class-pages {
   color: white;
 }
-.class-pages .class-uvqj872 {
+.class-pages .class-uwwzjwm {
   color: white;
 }
 
 /* show in scss and css not compressed mode */
 /*! show in scss and css and compressed mode */
 /* dynamic comment variable => pages*/
+ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
 /*# sourceMappingURL=main.css.map */

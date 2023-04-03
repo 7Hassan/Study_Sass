@@ -1,0 +1,11 @@
+//! mixing & include
+@mixin ls-reset{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@mixin circle($dimensions){
+  border-radius: 50%;
+  width: $dimensions;
+  height: $dimensions;
+}

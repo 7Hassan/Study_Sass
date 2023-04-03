@@ -1,6 +1,7 @@
 //! Importing
 @use './pages/pages'; //import _pages.scss file
 @use './variables/colors'; //import variables
+@use './mixin' as *; //import mixin and use it without mixin.nameMixin
 
 //! Variable
 $mainColor: green; //global global 
@@ -16,13 +17,46 @@ $max_mobile:'max-width:500px';
   }
 }
 
-//! Loops
-@for $i from 1 through 2{ //loop
+//! for Loops
+@for $i from 1 through 3{ //loop : 1,2,3
+  .class{
+    font-size: $i+1px;
+  } 
+}
+@for $i from 1 to 2{ //loop : 1,2
   .class{
     font-size: $i+1px;
   } 
 }
 
+//! while loop
+$start:0;
+@while $start <= 10{
+  .class{
+    font-size: $start+1px;
+  } 
+  $start:$start+1;
+}
+//! Each & map
+$colors:red,green,blue;
+@each $color in $colors{
+  .#{$color}-class{
+    color: $color;
+  }
+}
+$colors:('facebook':red,'inst':green);
+@each $name,$color in $colors{
+  .#{$name}-class{
+    color: $color;
+  }
+}
+$classes: 'one' 13px red,'tow' 12px green;
+@each $name,$font,$color in $classes{
+  .#{$name}-class{
+    color: $color;
+    font-size: $font;
+  }
+}
 //! Parent & nested child
 .parent{
   font-size: 10px;
@@ -138,3 +172,9 @@ $class_name: 'pages';
 /* show in scss and css not compressed mode */
 /*! show in scss and css and compressed mode */
 /* dynamic comment variable => #{$class_name}*/
+
+
+ul li{
+  @include ls-reset;
+  @include circle(100px);
+}
