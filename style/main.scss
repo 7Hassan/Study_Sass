@@ -1,8 +1,8 @@
 //! Importing
 @use './pages/pages'; //import _pages.scss file
-@use './variables/colors'; //import variables
-@use './mixin' as *; //import mixin and use it without mixin.nameMixin
-
+@use './helpers/colors'; //import variables
+@use './helpers/mixin' as *; //import mixin and use it without mixin.nameMixin
+@use './helpers/functions';
 //! Variable
 $mainColor: green; //global global 
 .class{
@@ -177,4 +177,23 @@ $class_name: 'pages';
 ul li{
   @include ls-reset;
   @include circle(100px);
+}
+
+//! Functions
+@function half($size){
+  @return $size/2;
+} 
+@function sizes($sizes...){
+  $total:0;
+  @each $size in $sizes{
+    $total:$total+$size;
+  }
+  @return $total;
+}
+.function{
+  width: half(20);
+  height: sizes(10,10,10);
+}
+.class{
+  color: functions.Animation('go');
 }

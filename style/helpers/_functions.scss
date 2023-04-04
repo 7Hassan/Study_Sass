@@ -1,0 +1,7 @@
+
+@function Animation($name){
+  @if $name=="go"{
+    @return go 1s linear;
+  }
+}
+

@@ -195,7 +195,7 @@
 .class-pages {
   color: white;
 }
-.class-pages .class-uwwzjwm {
+.class-pages .class-usizfha {
   color: white;
 }
 
@@ -210,4 +210,12 @@ ul li {
   width: 100px;
   height: 100px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.function {
+  width: 10;
+  height: 30;
+}
+
+.class {
+  color: go 1s linear;
+}/*# sourceMappingURL=main.css.map */
